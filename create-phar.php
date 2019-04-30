@@ -7,4 +7,4 @@ $phar = new Phar($buildRoot . "/main.phar",FilesystemIterator::CURRENT_AS_FILEIN
 $phar["main.php"] = file_get_contents($srcRoot . "/main.php");
 $phar["class.php"] = file_get_contents($srcRoot . "/class.php");
 $phar->setStub( "#!/usr/bin/env php\n".$phar->createDefaultStub("main.php"));
-chmod($buildRoot.'/main.phar',0777);
+/chmod($buildRoot.'/main.phar',0777);
